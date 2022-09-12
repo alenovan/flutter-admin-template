@@ -1,5 +1,6 @@
 import 'package:belajar_admin/menu/dashboard/component/BarChartSample6.dart';
 import 'package:belajar_admin/menu/dashboard/component/CardStatusCourse.dart';
+import 'package:belajar_admin/menu/dashboard/component/HomeWorkList.dart';
 import 'package:belajar_admin/menu/dashboard/component/RadarChartSample1.dart';
 import 'package:belajar_admin/menu/dashboard/headerdashboard.dart';
 import 'package:belajar_admin/utils/ColorResources.dart';
@@ -148,7 +149,7 @@ class _DashboardState extends State<Dashboard> {
                         ),
                         Responsive(
                           mobile: ResponsiveGridView(
-                            crossAxisCount: _size.width < 650 ? 3 : 3,
+                            crossAxisCount: _size.width < 650 ? 2 : 3,
                             childAspectRatio:
                                 _size.width < 650 && _size.width > 350
                                     ? 1.2
@@ -237,28 +238,30 @@ class _DashboardState extends State<Dashboard> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                "Learning Activity",
-                                                style: interMedium.copyWith(
-                                                    color: ColorResources
-                                                        .COLOR_TITLE_MENU,
-                                                    fontSize: 15.sp),
-                                              ),
-                                              SizedBox(
-                                                height: 5.h,
-                                              ),
-                                              Text(
-                                                "Track how your rating compares to your industry average.",
-                                                style: interRegular.copyWith(
-                                                    color: ColorResources
-                                                        .COLOR_GRAY_UNACTIVE_ICON,
-                                                    fontSize: 10.sp),
-                                              )
-                                            ],
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Learning Activity",
+                                                  style: interMedium.copyWith(
+                                                      color: ColorResources
+                                                          .COLOR_TITLE_MENU,
+                                                      fontSize: 15.sp),
+                                                ),
+                                                SizedBox(
+                                                  height: 5.h,
+                                                ),
+                                                Text(
+                                                  "Track how your rating compares to your industry average.",
+                                                  style: interRegular.copyWith(
+                                                      color: ColorResources
+                                                          .COLOR_GRAY_UNACTIVE_ICON,
+                                                      fontSize: 10.sp),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                           Container(
                                             child: Icon(Boxicons
@@ -266,7 +269,7 @@ class _DashboardState extends State<Dashboard> {
                                           )
                                         ],
                                       ),
-                                      BarChartSample6()
+                                      BarChartSample6(),
                                     ],
                                   ),
                                 ))),
@@ -308,6 +311,22 @@ class _DashboardState extends State<Dashboard> {
                                       )
                                     ],
                                   ),
+                                ),
+                                Container(
+                                  child: Column(children: [
+                                    HomeWorkList(),
+                                    SizedBox(
+                                      height: 5.h,
+                                    ),
+                                    HomeWorkList(),
+                                    SizedBox(
+                                      height: 5.h,
+                                    ),
+                                    HomeWorkList(),
+                                    SizedBox(
+                                      height: 5.h,
+                                    ),
+                                  ]),
                                 ),
                                 Container(
                                     margin: EdgeInsets.only(top: 20.h),
@@ -352,7 +371,9 @@ class _DashboardState extends State<Dashboard> {
                                                   )
                                                 ],
                                               ),
-                                              SizedBox(height: 22.h,),
+                                              SizedBox(
+                                                height: 22.h,
+                                              ),
                                               RadarChartSample1()
                                             ],
                                           ),

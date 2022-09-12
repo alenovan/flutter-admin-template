@@ -19,7 +19,8 @@ class CardStatusCourse extends StatelessWidget {
         child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
-              side: BorderSide(color: ColorResources.COLOR_STROKE_SIDEBAR, width: 2),
+              side: BorderSide(
+                  color: ColorResources.COLOR_STROKE_SIDEBAR, width: 2),
             ),
             elevation: 0.4,
             child: Container(
@@ -34,7 +35,8 @@ class CardStatusCourse extends StatelessWidget {
                         child: Text(
                           title,
                           style: interMedium.copyWith(
-                              color: ColorResources.COLOR_GRAY_UNACTIVE_ICON,fontSize: 10.sp),
+                              color: ColorResources.COLOR_GRAY_UNACTIVE_ICON,
+                              fontSize: 11.sp),
                         ),
                       ),
                       Container(
