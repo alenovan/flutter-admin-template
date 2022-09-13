@@ -14,9 +14,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class HomeWorkList extends StatelessWidget {
-  final String title, code, image;
   const HomeWorkList(
-      {Key? key, required this.title, required this.code, required this.image})
+      {Key? key})
       : super(key: key);
 
   @override
